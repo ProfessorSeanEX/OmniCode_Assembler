@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+
+  "opening": {
+    "metadata": {
+      "author": { "type": "string" },
+      "version": { "type": "string" },
+      "date_created": { "type": "string", "format": "date" },
+      "description": { "type": "string" },
+      "version_history": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "version": { "type": "string" },
+            "date": { "type": "string", "format": "date" },
+            "changes": { "type": "string" }
+          }
+        }
+      },
+      "documentation_reference": { "type": "string", "format": "uri" },
+      "license_reference": { "type": "string", "format": "uri" }
+    },
+    "structural_prerequisites": {
+      "dependencies": { "type": "array", "items": { "type": "string" } },
+      "execution_environment": { "type": "string" },
+      "execution_mode": { "type": "string", "enum": ["Interpretation", "Compilation"] }
+    },
+    "global_definitions": {
+      "global_constants": { "type": "object" },
+      "helper_functions": { "type": "array", "items": { "type": "string" } }
+    },
+    "biblical_anchor": {
+      "overall_reference": { "type": "string" }
+    },
+    "biblical_anchors": {
+      "instructions": {
+        "type": "object",
+        "patternProperties": {
+          ".*": { "type": "string" }
+        }
+      }
+    },
+    "security": {
+      "file_hash": { "type": "string" },
+      "schema_hash": { "type": "string" }
+    },
+    "execution_tracking": {
+      "previous_executions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "execution_id": { "type": "string" },
+            "date_executed": { "type": "string", "format": "date-time" },
+            "result": { "type": "string", "enum": ["Success", "Error", "Warning"] },
+            "log_reference": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    }
+  },
+  "body": {
+    "description": "Defines the structural framework for dynamically injected instructions.",
+
+    "biblical_anchors": {
+      "type": "object",
+      "description": "Biblical references dynamically linked to execution categories.",
+      "properties": {
+        "lookup_reference": { "type": "string" }
+      }
+    },
+
+    "category_block": {
+      "type": "object",
+      "description": "Defines structured execution categories.",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "execution_structure": {
+        "type": "object",
+        "properties": {
+        "valid_types": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "allow_dynamic_injection": { "type": "boolean" }
+        }
+    },
+
+    "instruction_components": {
+        "type": "object",
+        "patternProperties": {
+        ".*": {
+            "type": "array",
+            "items": {
+            "type": "object",
+            "properties": {
+                "name": { "type": "string" },
+                "category": { "type": "string" },
+                "opcode": { "type": "string", "pattern": "^0x[0-9A-Fa-f]+$" },
+                "binary": { "type": "string", "pattern": "^[01 ]+$" },
+                "traditional_equivalent": {
+                "type": "object",
+                "properties": {
+                    "x86": { "type": "string" },
+                    "ARM": { "type": "string" }
+                }
+                },
+                "description": { "type": "string" },
+                "execution_basics": { "type": "string" },
+                "biblical_reference": { "type": "string" }
+            }
+            }
+        }
+        }
+    },
+
+    "validation_rules": {
+      "type": "object",
+      "properties": {
+        "required_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allow_expansion": { "type": "boolean" }
+      }
+    },
+
+    "execution_flow": {
+      "type": "object",
+      "properties": {
+        "structured": { "type": "boolean" },
+        "allows_dynamic_paths": { "type": "boolean" }
+      }
+    },
+
+    "instruction_categorization": {
+      "type": "object",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allow_subcategories": { "type": "boolean" }
+      }
+    },
+
+    "security_constraints": {
+      "type": "object",
+      "properties": {
+        "execution_levels": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "permission_required": { "type": "boolean" }
+      }
+    },
+
+    "execution_logging": {
+      "type": "object",
+      "properties": {
+        "logging_enabled": { "type": "boolean" },
+        "log_format": { "type": "string" }
+      }
+    },
+
+    "instruction_handling": {
+      "type": "object",
+      "properties": {
+        "execution_process": { "type": "string" },
+        "error_handling": {
+          "type": "object",
+          "properties": {
+            "invalid_command": { "type": "string" },
+            "misaligned_execution": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "closing": {
+    "description": "Finalizes schema validation, prepares execution for next cycle, and ensures structured integrity.",
+
+    "schema_integrity": {
+      "validation_passed": { "type": "boolean" },
+      "compliance_status": { "type": "string", "enum": ["Valid", "Warnings", "Errors"] }
+    },
+
+    "baton_handoff": {
+      "next_execution_ready": { "type": "boolean" },
+      "handoff_state": { "type": "string", "enum": ["Paused", "Ready", "Waiting"] }
+    },
+
+    "versioning": {
+      "schema_version": { "type": "string" },
+      "last_updated": { "type": "string", "format": "date" },
+      "update_history": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "version": { "type": "string" },
+            "date": { "type": "string", "format": "date" },
+            "changes": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "security": {
+      "schema_hash": { "type": "string" },
+      "integrity_check": { "type": "boolean" }
+    },
+
+    "execution_completion": {
+      "final_state": { "type": "string", "enum": ["Success", "Partial", "Failed"] },
+      "log_reference": { "type": "string", "format": "uri" },
+      "prepares_next_execution": { "type": "boolean" }
+    }
+  }
+}

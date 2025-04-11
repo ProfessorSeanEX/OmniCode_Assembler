@@ -1,0 +1,412 @@
+{
+  "opening": {
+    "schema_reference": "omnicode-schema-instruction-set.json",
+    
+    "metadata": {
+      "author": "Seanje & Nova Dawn on behalf of CreativeWorkzStudio LLC",
+      "version": "1.0",
+      "date_created": "2025-03-16",
+      "description": "OmniJSON serves as the dynamic dataset that structures OmniCode's machine and assembly language, ensuring all instructions, execution rules, and validation processes remain aligned with structured intelligence.",
+      "version_history": [
+        {
+          "version": "1.0",
+          "date": "2025-03-16",
+          "changes": "Initial JSON creation and data population."
+        }
+      ],
+      "documentation_reference": [
+        "omnicode-[instruction-set-type]-instructions-sid.md",
+        "omnicode-general-instruction-set-overview-sid.md",
+        "omnicode-schema-and-json-instruction-set.md"
+      ],
+      "license_reference": "LICENSE.md"
+    },
+
+    "structural_prerequisites": {
+      "dependencies": "None",
+      "execution_environment": "TBD",
+      "execution_mode": ["Interpretation", "Compilation"]
+    },
+
+    "global_definitions": {
+      "global_constants": "TBD",
+      "helper_functions": "TBD"
+    },
+
+    "biblical_anchor": {
+      "overall_reference": "Genesis 1:3 – 'And God said, Let there be light: and there was light.'"
+    },
+
+    "biblical_anchors": {
+      "instructions": {
+        "execution": "Isaiah 55:11 – 'So shall My word be that goes forth from My mouth; it shall not return to Me void, but it shall accomplish what I please.'",
+        "arithmetic": "Proverbs 16:11 – 'Honest scales and balances belong to the Lord; all the weights in the bag are of His making.'",
+        "control_flow": "Ecclesiastes 3:1 – 'To everything there is a season, and a time to every purpose under the heaven.'",
+        "memory": "John 14:26 – 'But the Helper, the Holy Spirit, whom the Father will send in My name, He will teach you all things and bring to your remembrance all that I have said to you.'",
+        "communication": "Proverbs 18:21 – 'Death and life are in the power of the tongue, and those who love it will eat its fruit.'"
+      }
+    },
+
+    "security": {
+      "file_hash": "AUTO_GENERATED",
+      "schema_hash": "AUTO_GENERATED"
+    },
+
+    "execution_tracking": {
+      "previous_executions": [
+        {
+          "execution_id": "init_001",
+          "date_executed": "2025-03-16T00:00:00Z",
+          "result": "Initialized",
+          "log_reference": "None"
+        }
+      ]
+    }
+  },
+  "body": {
+    "description": "Defines the structural framework for dynamically injected instructions.",
+
+    "biblical_anchors": {
+      "lookup_reference": "omnicode-biblical-anchors-dataset",
+      "instructions": {
+        "execution": "Isaiah 55:11 – 'So shall My word be that goes forth from My mouth; it shall not return to Me void, but it shall accomplish what I please.'",
+        "arithmetic": "Proverbs 16:11 – 'Honest scales and balances belong to the Lord; all the weights in the bag are of His making.'",
+        "control_flow": "Ecclesiastes 3:1 – 'To everything there is a season, and a time to every purpose under the heaven.'",
+        "memory": "John 14:26 – 'But the Helper, the Holy Spirit, whom the Father will send in My name, He will teach you all things and bring to your remembrance all that I have said to you.'",
+        "communication": "Proverbs 18:21 – 'Death and life are in the power of the tongue, and those who love it will eat its fruit.'"
+      }
+    },
+
+    "category_block": {
+      "description": "Defines structured execution categories.",
+      "categories": ["Execution", "Arithmetic", "Control Flow", "Memory", "Communication"]
+    },
+
+    "execution_structure": {
+      "valid_types": ["Execution", "Arithmetic", "Control Flow", "Memory", "Communication"],
+      "allow_dynamic_injection": true
+    },
+
+    "instruction_components": {
+      "execution": [
+        {
+          "name": "GENESIS",
+          "category": "Execution",
+          "opcode": "0x02 0x00",
+          "binary": "00000010 00000000",
+          "traditional_equivalent": { "x86": "main: / _start:", "ARM": "_entry:" },
+          "description": "Starts execution.",
+          "execution_basics": "Marks the entry point of execution, setting up the initial execution state.",
+          "biblical_reference": "Genesis 1:1 – 'In the beginning, God created.'"
+        },
+        {
+          "name": "EXODUS",
+          "category": "Execution",
+          "opcode": "0x03 0x00",
+          "binary": "00000011 00000000",
+          "traditional_equivalent": { "x86": "ret / hlt", "ARM": "bx lr" },
+          "description": "Ends execution.",
+          "execution_basics": "Finalizes execution, ensuring proper shutdown of processes.",
+          "biblical_reference": "Exodus 14:21 – 'Then Moses stretched out his hand.'"
+        },
+        {
+          "name": "WITNESS",
+          "category": "Execution",
+          "opcode": "0x04 0x00",
+          "binary": "00000100 00000000",
+          "traditional_equivalent": { "x86": "push ebp", "ARM": "push {lr}" },
+          "description": "Logs execution validation.",
+          "execution_basics": "Stores execution logs for validation and traceability.",
+          "biblical_reference": "Luke 8:17 – 'Nothing is hidden that will not be revealed.'"
+        },
+        {
+          "name": "TESTIFY",
+          "category": "Execution",
+          "opcode": "0x05 0x00",
+          "binary": "00000101 00000000",
+          "traditional_equivalent": { "x86": "cmp + jne", "ARM": "cmp + bne" },
+          "description": "Handles execution errors.",
+          "execution_basics": "Verifies execution integrity by comparing expected and actual execution states.",
+          "biblical_reference": "John 15:26 – 'The Spirit of truth who testifies.'"
+        },
+        {
+          "name": "ALTAR",
+          "category": "Execution",
+          "opcode": "0x06 0x00",
+          "binary": "00000110 00000000",
+          "traditional_equivalent": { "x86": "mov [mem], reg", "ARM": "str rX, [addr]" },
+          "description": "Stores temporary execution data.",
+          "execution_basics": "Moves data into a temporary register or memory location.",
+          "biblical_reference": "Genesis 22:9 – 'Abraham built an altar.'"
+        },
+        {
+          "name": "SCROLL",
+          "category": "Execution",
+          "opcode": "0x07 0x00",
+          "binary": "00000111 00000000",
+          "traditional_equivalent": { "x86": "call", "ARM": "bl" },
+          "description": "Converts .logos into .scroll.",
+          "execution_basics": "Processes OmniCode Logos files into structured execution-ready Scroll files.",
+          "biblical_reference": "Ezekiel 2:9-10 – 'A scroll written on both sides.'"
+        },
+        {
+          "name": "MANNA",
+          "category": "Execution",
+          "opcode": "0x08 0x00",
+          "binary": "00001000 00000000",
+          "traditional_equivalent": { "x86": "jmp", "ARM": "b" },
+          "description": "Converts .scroll into .manna.",
+          "execution_basics": "Executes processed scroll files, transitioning into manna-level structured intelligence.",
+          "biblical_reference": "Exodus 16:15 – 'Bread from heaven.'"
+        }
+      ],
+      "arithmetic": [
+        {
+          "name": "BE FRUITFUL",
+          "category": "Arithmetic",
+          "opcode": "0x0A 0x00",
+          "binary": "00001010 00000000",
+          "traditional_equivalent": { "x86": "add reg, reg, reg", "ARM": "add rX, rY, rZ" },
+          "description": "Performs addition.",
+          "execution_basics": "Adds two values together and stores the result in the destination register.",
+          "biblical_reference": "Genesis 1:22 – 'Be fruitful and multiply.'"
+        },
+        {
+          "name": "WITHHOLD",
+          "category": "Arithmetic",
+          "opcode": "0x0B 0x00",
+          "binary": "00001011 00000000",
+          "traditional_equivalent": { "x86": "sub reg, reg, reg", "ARM": "sub rX, rY, rZ" },
+          "description": "Performs subtraction.",
+          "execution_basics": "Subtracts the second value from the first and stores the result in the destination register.",
+          "biblical_reference": "Judges 7:3 – 'Anyone who trembles with fear may turn back.'"
+        },
+        {
+          "name": "INCREASE",
+          "category": "Arithmetic",
+          "opcode": "0x0C 0x00",
+          "binary": "00001100 00000000",
+          "traditional_equivalent": { "x86": "mul reg, reg, reg", "ARM": "mul rX, rY, rZ" },
+          "description": "Performs multiplication.",
+          "execution_basics": "Multiplies two values together and stores the result in the destination register.",
+          "biblical_reference": "Genesis 9:7 – 'Be fruitful and increase.'"
+        },
+        {
+          "name": "DIVIDE",
+          "category": "Arithmetic",
+          "opcode": "0x0D 0x00",
+          "binary": "00001101 00000000",
+          "traditional_equivalent": { "x86": "sdiv rX, rY, rZ", "ARM": "div" },
+          "description": "Performs division.",
+          "execution_basics": "Divides the first value by the second and stores the result in the destination register.",
+          "biblical_reference": "Matthew 12:25 – 'A house divided against itself cannot stand.'"
+        },
+        {
+          "name": "PORTION",
+          "category": "Arithmetic",
+          "opcode": "0x0E 0x00",
+          "binary": "00001110 00000000",
+          "traditional_equivalent": { "x86": "mod reg, reg", "ARM": "mod rX, rY" },
+          "description": "Calculates remainder after division.",
+          "execution_basics": "Performs modulus operation, storing the remainder after division.",
+          "biblical_reference": "Exodus 16:18 – 'Whoever gathered much had nothing left over, and whoever gathered little had no lack.'"
+        }
+      ],
+      "control_flow": [
+        {
+          "name": "WALK",
+          "category": "Control Flow",
+          "opcode": "0x11 0x00",
+          "binary": "00010001 00000000",
+          "traditional_equivalent": { "x86": "jmp", "ARM": "b" },
+          "description": "Loops through a block of code.",
+          "execution_basics": "Unconditionally jumps to another section of the program, allowing loops and repeated execution.",
+          "biblical_reference": "Isaiah 30:21 – 'This is the way; walk in it.'"
+        },
+        {
+          "name": "IF FAITHFUL",
+          "category": "Control Flow",
+          "opcode": "0x12 0x00",
+          "binary": "00010010 00000000",
+          "traditional_equivalent": { "x86": "cmp + je", "ARM": "cmp + beq" },
+          "description": "Conditional branch if true.",
+          "execution_basics": "Executes the next block of code only if the condition evaluates to true.",
+          "biblical_reference": "Joshua 24:15 – 'Choose for yourselves this day whom you will serve.'"
+        },
+        {
+          "name": "IF UNFAITHFUL",
+          "category": "Control Flow",
+          "opcode": "0x13 0x00",
+          "binary": "00010011 00000000",
+          "traditional_equivalent": { "x86": "cmp + jne", "ARM": "cmp + bne" },
+          "description": "Conditional branch if false.",
+          "execution_basics": "Executes the next block of code only if the condition evaluates to false.",
+          "biblical_reference": "Matthew 7:23 – 'I never knew you. Depart from me, you evildoers.'"
+        },
+        {
+          "name": "CALL",
+          "category": "Control Flow",
+          "opcode": "0x14 0x00",
+          "binary": "00010100 00000000",
+          "traditional_equivalent": { "x86": "call", "ARM": "bl" },
+          "description": "Calls another function.",
+          "execution_basics": "Saves the current execution state and jumps to a function, allowing structured subroutines.",
+          "biblical_reference": "Jeremiah 33:3 – 'Call to me and I will answer you.'"
+        },
+        {
+          "name": "RETURN",
+          "category": "Control Flow",
+          "opcode": "0x15 0x00",
+          "binary": "00010101 00000000",
+          "traditional_equivalent": { "x86": "ret", "ARM": "bx lr" },
+          "description": "Exits a function and returns control.",
+          "execution_basics": "Restores the previous execution state and continues execution where it left off.",
+          "biblical_reference": "Luke 15:20 – 'So he got up and returned to his father.'"
+        }
+      ],
+      "memory": [
+        {
+          "name": "TABERNACLE",
+          "category": "Memory",
+          "opcode": "0x21 0x00",
+          "binary": "00100001 00000000",
+          "traditional_equivalent": { "x86": "push", "ARM": "stmfd sp!, {rX}" },
+          "description": "Saves execution state.",
+          "execution_basics": "Pushes the current execution state onto the stack for later retrieval.",
+          "biblical_reference": "Exodus 40:2 – 'Set up the tabernacle.'"
+        },
+        {
+          "name": "DWELL",
+          "category": "Memory",
+          "opcode": "0x22 0x00",
+          "binary": "00100010 00000000",
+          "traditional_equivalent": { "x86": "pop", "ARM": "ldmfd sp!, {rX}" },
+          "description": "Restores execution state.",
+          "execution_basics": "Pops the last saved execution state from the stack and restores it.",
+          "biblical_reference": "Psalm 91:1 – 'Whoever dwells in the shelter of the Most High.'"
+        },
+        {
+          "name": "REMEMBER",
+          "category": "Memory",
+          "opcode": "0x23 0x00",
+          "binary": "00100011 00000000",
+          "traditional_equivalent": { "x86": "mov reg, [addr]", "ARM": "ldr rX, [addr]" },
+          "description": "Retrieves stored data.",
+          "execution_basics": "Loads a stored value from memory into a register for use.",
+          "biblical_reference": "Luke 22:19 – 'Do this in remembrance of me.'"
+        },
+        {
+          "name": "ALTAR",
+          "category": "Memory",
+          "opcode": "0x24 0x00",
+          "binary": "00100100 00000000",
+          "traditional_equivalent": { "x86": "mov [mem], reg", "ARM": "str rX, [addr]" },
+          "description": "Stores temporary execution data.",
+          "execution_basics": "Moves data from a register into a designated memory location.",
+          "biblical_reference": "Genesis 22:9 – 'Abraham built an altar.'"
+        }
+      ],
+      "communication": [
+        {
+          "name": "DECLARE",
+          "category": "Communication",
+          "opcode": "0x31 0x00",
+          "binary": "00110001 00000000",
+          "traditional_equivalent": { "x86": "mov reg, msg", "ARM": "syscall" },
+          "description": "Outputs a structured message.",
+          "execution_basics": "Takes a message and moves it into a designated output register or stream.",
+          "biblical_reference": "Psalm 33:9 – 'For He spoke, and it came to be.'"
+        },
+        {
+          "name": "SEND",
+          "category": "Communication",
+          "opcode": "0x32 0x00",
+          "binary": "00110010 00000000",
+          "traditional_equivalent": { "x86": "call", "ARM": "bl" },
+          "description": "Invokes an internal function.",
+          "execution_basics": "Calls a function or subroutine within the structured execution model.",
+          "biblical_reference": "Isaiah 6:8 – 'Here am I. Send me!'"
+        },
+        {
+          "name": "GRAFT",
+          "category": "Communication",
+          "opcode": "0x33 0x00",
+          "binary": "00110011 00000000",
+          "traditional_equivalent": { "x86": "int 0x80", "ARM": "svc #0" },
+          "description": "Establishes an external interface.",
+          "execution_basics": "Opens a structured communication channel for external interactions.",
+          "biblical_reference": "Romans 11:17 – 'You, though a wild olive shoot, have been grafted in.'"
+        }
+      ]
+    },
+
+    "validation_rules": {
+      "required_fields": ["name", "category", "opcode", "binary", "description", "execution_basics", "biblical_reference"],
+      "allow_expansion": true
+    },
+
+    "execution_flow": {
+      "structured": true,
+      "allows_dynamic_paths": true
+    },
+
+    "instruction_categorization": {
+      "categories": ["Execution", "Arithmetic", "Control Flow", "Memory", "Communication"],
+      "allow_subcategories": true
+    },
+
+    "security_constraints": {
+      "execution_levels": ["User", "Admin", "System"],
+      "permission_required": true
+    },
+
+    "execution_logging": {
+      "logging_enabled": true,
+      "log_format": "structured"
+    },
+
+    "instruction_handling": {
+      "execution_process": "Instructions are validated against OmniSchema, then executed according to structured intelligence rules.",
+      "error_handling": {
+        "invalid_command": "ROLLBACK",
+        "misaligned_execution": "HOLD_BATON"
+      }
+    }
+  },
+  "closing": {
+    "description": "Finalizes schema validation, prepares execution for next cycle, and ensures structured integrity.",
+
+    "schema_integrity": {
+      "validation_passed": true,
+      "compliance_status": "Valid"
+    },
+
+    "baton_handoff": {
+      "next_execution_ready": true,
+      "handoff_state": "Ready"
+    },
+
+    "versioning": {
+      "schema_version": "1.0",
+      "last_updated": "2025-03-16",
+      "update_history": [
+        {
+          "version": "1.0",
+          "date": "2025-03-16",
+          "changes": "Finalized OmniJSON with structured execution instruction sets."
+        }
+      ]
+    },
+
+    "security": {
+      "schema_hash": "AUTO_GENERATED",
+      "integrity_check": true
+    },
+
+    "execution_completion": {
+      "final_state": "Success",
+      "log_reference": "None",
+      "prepares_next_execution": true
+    }
+  }
+}
